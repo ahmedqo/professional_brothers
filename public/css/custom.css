@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+    font-family: "CustomFont";
+    src: url("/font/light.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "CustomFont";
+    src: url("/font/bold.otf");
+    font-weight: 900;
+}
+
+html[dir="ltr"] *,
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+html[dir="rtl"] * {
+    font-family: "CustomFont", Arial, sans-serif;
+}
+
+.clip-1 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 66% 100%, 60% 90%, 0 90%);
+}
+
+html[dir="rtl"] .clip-1 {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 40% 90%, 34% 100%, 0 100%);
+}
+
+.clip-2 {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 40% 90%, 34% 100%, 0 100%);
+}
+
+html[dir="rtl"] .clip-2 {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 66% 100%, 60% 90%, 0 90%);
+}
+
+:root {
+    --primary-color: 18 95 127;
+    --primary-color-hex: #115e7f;
+    --gray-color-hex: #e5e7eb;
+}
+
+.xdp-container:focus-within,
+.xp-container:focus-within,
+.xi-container:focus-within,
+.xt-select-container:focus-within,
+.xt-search:focus-within,
+.xt-select-outlined,
+.xs-container:focus-within,
+.xs-outlined,
+.xdp-outlined,
+.xs-input:focus-within {
+    outline-color: rgb(var(--primary-color) / 1);
+}
+
+.bg-custom {
+    background: rgb(6, 49, 68);
+    background: linear-gradient(45deg, rgba(6, 49, 68, 1) 0%, rgba(17, 94, 127, 1) 35%, rgba(26, 150, 203, 1) 100%);
+}
+
+.xdp-controls,
+.xdp-days,
+.xdp-date-selected,
+.xs-item-selected,
+.xs-input:checked,
+.xt-pagination-selected {
+    background-color: rgb(var(--primary-color) / 1);
+}
+
+.xdp-date-current {
+    background-color: rgb(var(--primary-color) / .5);
+}
+
+.xt-table-head-row td {
+    padding-bottom: 0;
+    line-height: 0.75;
+}
+
+
+/*.setting .xp-content-container,
+.xdp-content-container,
+.xs-content-container,
+.xs-overflow-hidden,
+.xt-search,
+.xt-select-list,
+.xt-select-text {
+    background-color: #ffffff;
+}*/
+
+.xt-table-row td {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--gray-color-hex);
+    border-bottom: 1px solid var(--gray-color-hex);
+}
+
+.xt-table-row td:first-child {
+    border-inline-start: 1px solid var(--gray-color-hex);
+}
+
+.xt-table-row td:last-child {
+    border-inline-end: 1px solid var(--gray-color-hex);
+}
+
+
+/* .tbl input {
+    background-color: #f5f5f5;
+    border: 1px solid var(--gray-color-hex);
+} */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.calc .xs-text {
+    color: rgb(var(--primary-color) / 1);
+}
+
+.calc .xs-content-container {
+    background-color: #FFF;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-inline-start: .5rem;
+    border-radius: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+    .calc .xs-content-container {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-inline-start: 1rem;
+        border-radius: 0.75rem;
+    }
+}
+
+@media (min-width: 1536px) {
+    .calc .xs-content-container {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
